@@ -131,8 +131,9 @@ El diagrama completo del circuito y de la PCB está en el [informe final](docs/i
 | 19 | [<img src="capturas/captura-19.png" width="240">](capturas/captura-19.png) | Leyendas de Guatemala |
 | 20 | [<img src="capturas/captura-20.png" width="240">](capturas/captura-20.png) | Leyenda de El Cadejo |
 | 21 | [<img src="capturas/captura-21.png" width="240">](capturas/captura-21.png) | Ajustes |
-| 22 | [<img src="capturas/captura-22.png" width="240">](capturas/captura-22.png) | Cumpleaños |
-| 23 | [<img src="capturas/captura-23.png" width="240">](capturas/captura-23.png) | Dashboard de Blynk |
+| 22 | [<img src="capturas/captura-22.png" width="240">](capturas/captura-22.png) | Nawal del niño y de Teco (Cholq'ij) |
+| 23 | [<img src="capturas/captura-23.png" width="240">](capturas/captura-23.png) | Cumpleaños |
+| 24 | [<img src="capturas/captura-24.png" width="240">](capturas/captura-24.png) | Dashboard de Blynk |
 
 ## Video demo
 
