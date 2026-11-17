@@ -1,0 +1,29 @@
+# Credenciales reales (nunca al repositorio)
+.env
+*.env
+!.env.example
+src/teco/secrets.h
+secrets.h
+
+# Dependencias y compilacion
+node_modules/
+build/
+*.bin
+*.elf
+*.hex
+*.map
+__pycache__/
+*.pyc
+
+# IDE y sistema operativo
+.idea/
+.vscode/
+*.swp
+.DS_Store
+._*
+Thumbs.db
+
+# Temporales
+*.tmp
+*.log
+*.bak
