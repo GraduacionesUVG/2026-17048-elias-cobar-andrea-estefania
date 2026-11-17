@@ -10,20 +10,6 @@ Tecolotchi (Teco) es una mascota virtual física con forma de tecolote que ense�
 
 Trabajo de graduación en modalidad de trabajo profesional, Universidad del Valle de Guatemala, 2026.
 
-## Contenido
-
-- [Descripción](#descripción)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologías utilizadas](#tecnologías-utilizadas)
-- [Requisitos previos](#requisitos-previos)
-- [Instalación](#instalación)
-- [Ejecución](#ejecución)
-- [Capturas de pantalla](#capturas-de-pantalla)
-- [Video demo](#video-demo)
-- [Documentación](#documentación)
-- [Autora](#autora)
-- [Licencia](#licencia)
-
 ### Funcionalidades
 
 - **Cuidado de la mascota:** hambre, energía, diversión y aprendizaje. Teco come el alimento que se elige por su nombre en Kaqchikel, bebe al acercarle un imán, responde a las caricias y cambia entre día y noche según la hora real.
@@ -44,10 +30,8 @@ Trabajo de graduación en modalidad de trabajo profesional, Universidad del Vall
 | Audio | DFPlayer Mini con MicroSD (MP3), controlado por UART |
 | Sensores y entradas | Sensor Hall (imán), sensor táctil capacitivo y 4 botones |
 | IoT | Blynk IoT (pines virtuales V0–V14 y app móvil) |
-| Persistencia | Preferences (NVS) del ESP32 |
 | Hora real | NTP por WiFi |
 | Gráficos | Ilustraciones en Procreate convertidas a sprites RGB565 con Python (Pillow) |
-| Audio de las palabras | Grabaciones editadas con ffmpeg (MP3 mono) |
 | Hardware | PCB diseñada en Fritzing y carcasa impresa en 3D |
 
 ## Requisitos previos
@@ -58,8 +42,7 @@ Trabajo de graduación en modalidad de trabajo profesional, Universidad del Vall
 - Paquete de tarjetas **esp32 de Espressif 3.x**
 - Bibliotecas **Adafruit GFX Library**, **Adafruit ILI9341** y **Blynk**
 - Python 3
-- Controlador USB-serie de la tarjeta, si la computadora no la reconoce (por ejemplo, CP210x)
-- Cuenta en [Blynk](https://blynk.cloud) (opcional; sin ella Teco funciona sin dashboard)
+- Cuenta en [Blynk](https://blynk.cloud) (opcional)
 
 **Hardware**
 
@@ -104,15 +87,12 @@ El diagrama completo del circuito y de la PCB está en el [informe final](docs/i
    python3 src/herramientas/env_a_secrets.py
    ```
 
-   El script genera `src/teco/secrets.h`. Ni `.env` ni `secrets.h` se suben al repositorio.
-
-5. **Preparar la MicroSD.** Formatearla en **FAT32** y copiar en la raíz las carpetas `02` a `07` de [`src/microsd`](src/microsd). En macOS, ejecutar `dot_clean /Volumes/<nombre-de-la-tarjeta>` para borrar los archivos ocultos. Insertar la tarjeta en el DFPlayer Mini.
+5. **Preparar la MicroSD.** Formatearla en **FAT32** y copiar en la raíz las carpetas `02` a `07` de [`src/microsd`](src/microsd). Insertar la tarjeta en el DFPlayer Mini.
 
 6. **Configurar la placa.** En *Herramientas*:
    - Placa: **ESP32 Dev Module**
    - Flash Size: **4MB (32Mb)**
    - Partition Scheme: **Huge APP (3MB No OTA/1MB SPIFFS)**
-   - Upload Speed: **115200** (si la carga falla en macOS)
 
 ## Ejecución
 
@@ -125,11 +105,8 @@ El diagrama completo del circuito y de la PCB está en el [informe final](docs/i
    - **Sensor táctil:** acariciar a Teco.
 5. **WiFi (opcional):** en *Ajustes › WiFi y datos*, conectarse desde el celular a la red **Teco-configuracion**, elegir la red de la casa (2.4 GHz) y escribir la contraseña.
 6. **Dashboard:** con WiFi y token configurados, el estado de Teco aparece en la app de Blynk.
-7. **Pruebas de hardware:** los programas de [`src/pruebas_hardware`](src/pruebas_hardware) revisan cada componente por separado (Monitor Serie a 115200).
 
 ## Capturas de pantalla
-
-Las pantallas del dispositivo (320 × 240) se muestran ampliadas a 960 × 720.
 
 | # | Captura | Descripción |
 |---|---|---|
@@ -159,14 +136,12 @@ Las pantallas del dispositivo (320 × 240) se muestran ampliadas a 960 × 720.
 
 ## Video demo
 
-[`demo/demo.mp4`](demo/demo.mp4): recorrido de 4 min 47 s por el prototipo, el cuidado de la mascota, las lecciones, los minijuegos, los viajes, las leyendas, los ajustes y el dashboard.
+Video demostrativo: [`demo/demo.mp4`](demo/demo.mp4) (4 min 47 s).
 
 ## Documentación
 
 - Informe final: [`docs/informe_final.pdf`](docs/informe_final.pdf)
 - Consentimiento de uso de foto y video firmado: [`docs/consentimiento_firmado.pdf`](docs/consentimiento_firmado.pdf)
-
-La guía de replicación (materiales, conexiones, PCB y carga del programa) está en los anexos del informe final.
 
 ## Autora
 
